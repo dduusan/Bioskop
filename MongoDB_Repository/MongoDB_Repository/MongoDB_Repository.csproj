@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61E84F15-0814-4FCF-A1DD-34EBFC1A5985}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MongoDB_Repository</RootNamespace>
+    <AssemblyName>MongoDB_Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Izmena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izmena.Designer.cs">
+      <DependentUpon>Izmena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objekti\Admin.cs" />
+    <Compile Include="DodajFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajFilm.Designer.cs">
+      <DependentUpon>DodajFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EkranAdmina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EkranAdmina.Designer.cs">
+      <DependentUpon>EkranAdmina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objekti\DataProvider.cs" />
+    <Compile Include="Objekti\Film.cs" />
+    <Compile Include="Objekti\Korisnik.cs" />
+    <Compile Include="KorisnikEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnikEkran.Designer.cs">
+      <DependentUpon>KorisnikEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logovanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logovanje.Designer.cs">
+      <DependentUpon>Logovanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objekti\Sala.cs" />
+    <Compile Include="PocetniEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PocetniEkran.Designer.cs">
+      <DependentUpon>PocetniEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registracija.Designer.cs">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervisaneKarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervisaneKarte.Designer.cs">
+      <DependentUpon>RezervisaneKarte.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DodajFilm.resx">
+      <DependentUpon>DodajFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EkranAdmina.resx">
+      <DependentUpon>EkranAdmina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izmena.resx">
+      <DependentUpon>Izmena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnikEkran.resx">
+      <DependentUpon>KorisnikEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logovanje.resx">
+      <DependentUpon>Logovanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PocetniEkran.resx">
+      <DependentUpon>PocetniEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registracija.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervisaneKarte.resx">
+      <DependentUpon>RezervisaneKarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADMIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KORISNIK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POZADINA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PLATNO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DODAJFILM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KorisnikPoz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pretraga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popcorn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karte.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
